@@ -24,7 +24,7 @@ Main result of the manuscript: on the Fermat sextic fourfold, exact second-order
 | Sum jet to order six | `sage calculations/bundles/aoki-sextic-second-order/aoki-sextic-sum-order-six.sage` |
 | Moving apolar S2 | `sage calculations/bundles/aoki-sextic-moving-apolar-s2/aoki-sextic-moving-apolar-s2.sage` |
 | Hilbert tangent at y0 | `Y0_EXACT=1 sage calculations/bundles/aoki-sextic-y0-hilbert-tangent/aoki-y0-hilbert-tangent.sage` |
-| Singular: central union special fibre | `Singular -q calculations/bundles/aoki-sextic-ci-special-fiber/aoki-sextic-ci-special-fiber.sing < /dev/null` |
+| Singular: central union special fibre | `sage -singular -q calculations/bundles/aoki-sextic-ci-special-fiber/aoki-sextic-ci-special-fiber.sing < /dev/null` |
 
 The programs check the finite and exact computations used in the manuscript; the mathematical arguments are those written in the paper.
 
@@ -37,7 +37,7 @@ sage calculations/bundles/aoki-sextic-second-order/aoki-sextic-difference-second
 sage calculations/bundles/aoki-sextic-second-order/aoki-sextic-sum-order-six.sage
 sage calculations/bundles/aoki-sextic-moving-apolar-s2/aoki-sextic-moving-apolar-s2.sage
 Y0_EXACT=1 sage calculations/bundles/aoki-sextic-y0-hilbert-tangent/aoki-y0-hilbert-tangent.sage
-Singular -q calculations/bundles/aoki-sextic-ci-special-fiber/aoki-sextic-ci-special-fiber.sing < /dev/null
+sage -singular -q calculations/bundles/aoki-sextic-ci-special-fiber/aoki-sextic-ci-special-fiber.sing < /dev/null
 ```
 
 Requirements: SageMath. Run the commands from a copy if you want to keep the recorded outputs untouched.
