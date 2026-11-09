@@ -1,0 +1,67 @@
+option(redSB);
+ring r=109,(x0,x1,x2,x3,x4,x5),dp;
+
+// Good-reduction certificate for the proposed central fibre of a moving
+// (2,3,3) complete intersection.  Here mu=8 satisfies Phi_12(mu)=0 and
+// a=57 satisfies a^3=2 in GF(109); i=mu^3=76.
+number mu=8;
+number a=57;
+number ii=76;
+
+poly ell=x4-mu*x5;
+poly ellp=x5-mu*x3;
+poly q=x0^2-a*x1*x2;
+poly c=x1^3+x2^3+ii*x3^3;
+poly qp=x1^2-a*x0*x2;
+poly cp=x0^3+x2^3+ii*x4^3;
+poly F=x0^6+x1^6+x2^6+x3^6+x4^6+x5^6;
+
+ideal IS=ell,q,c;
+ideal ISp=ellp,qp,cp;
+ideal IT=ell,ellp,F;
+
+// S and S' are projectively disjoint.  Their affine cones meet only at the
+// origin, so the homogeneous coordinate quotient has Krull dimension zero.
+ideal GSSp=std(IS+ISp);
+"S_SPRIME_SUM_DIM_VDIM";
+dim(GSSp); vdim(GSSp);
+
+"COMPONENT_DIM_DEG_HVECTOR";
+ideal GS=std(IS); dim(GS); degree(GS); hilb(GS,2);
+ideal GSp=std(ISp); dim(GSp); degree(GSp); hilb(GSp,2);
+ideal GT=std(IT); dim(GT); degree(GT); hilb(GT,2);
+
+// Both nonempty pairwise intersections are (1,1,2,3) complete-intersection
+// curves of degree six and arithmetic genus four.  S cap S' and the triple
+// intersection are empty projectively.
+"PAIR_INTERSECTION_DIM_DEG_HVECTOR";
+ideal GST=std(IS+IT); dim(GST); degree(GST); hilb(GST,2);
+ideal GSpT=std(ISp+IT); dim(GSpT); degree(GSpT); hilb(GSpT,2);
+
+// Y0=S union S' union T.  Its degree and Hilbert polynomial agree with a
+// (2,3,3) complete-intersection surface:
+// P_Y0(n)=2(3n^2+2)+(3n^2-6n+11)-2(6n-3)
+//        =9n^2-18n+21.
+ideal IY=intersect(intersect(IS,ISp),IT);
+ideal GY=std(IY);
+"Y0_STANDARD_BASIS";
+print(GY);
+"Y0_DIM_DEG_HVECTOR";
+dim(GY); degree(GY); hilb(GY,2); hilb(GY);
+
+resolution RY=mres(IY,0);
+"Y0_BETTI";
+betti(RY,1);
+
+// The minimal generator degrees read from this resolution are
+// (2,3,3,4,4,6).  In particular q and the two cubics below are the common
+// low-degree equations predicted by the two dying degree-four syzygies.
+poly qcommon=x3*x4-8*x3*x5-41*x4*x5+x5^2;
+poly c3=25*x0^2*x3-8*x1*x2*x3-44*x0^2*x5+x1*x2*x5;
+poly c4=-41*x1^2*x4+48*x0*x2*x4+x1^2*x5+52*x0*x2*x5;
+"COMMON_GENERATORS_IN_Y0";
+reduce(qcommon,GY)==0;
+reduce(c3,GY)==0;
+reduce(c4,GY)==0;
+
+quit;

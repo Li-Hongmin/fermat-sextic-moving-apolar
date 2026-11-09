@@ -1,0 +1,27 @@
+PERIOD TRANSPORT: L0(A)-3s L0(red4(Ah1))+s^2[-3L0(red4(Ah2))+6L0(red5(Ah1^2))]
+Jacobian transport failures 0
+Hodge-type transport failures 0
+period polynomial coefficient counts 36 50 69
+degree 2 full streamed/active/joint-basis 3003 2159 60 matrix 60 x 21 ranks 20 21 21
+base_kernel/first_lift/second_lift 1 1 1
+A-module = A^1 + (sA)^0 + (s^2A)^0
+degree 2 center streamed/active/joint-basis 1506 1147 60 matrix 60 x 21 ranks 20 21 21
+base_kernel/first_lift/second_lift 1 1 1
+A-module = A^1 + (sA)^0 + (s^2A)^0
+center Jacobian-basis invariant crosscheck (1, 1, 1)
+central quadratic x3*x4 + (-mu)*x3*x5 + (mu^3 - mu)*x4*x5 + x5^2
+lifted quadratic q1 ((1/6*mu^2 - 1/6)*a)*x0*x1 + (-1/6*mu^2 + 1/6)*x2^2
+lifted quadratic q2 0
+factor tangent rank/augmented 11 12 first_factorable False
+degree 3 full streamed/active/joint-basis 2002 1809 136 matrix 136 x 56 ranks 46 50 53
+base_kernel/first_lift/second_lift 10 10 10
+A-module = A^10 + (sA)^0 + (s^2A)^0
+degree 3 center streamed/active/joint-basis 1246 1166 136 matrix 136 x 56 ranks 46 50 53
+base_kernel/first_lift/second_lift 10 10 10
+A-module = A^10 + (sA)^0 + (s^2A)^0
+center Jacobian-basis invariant crosscheck (10, 10, 10)
+central cubic kernel / quadratic multiples / minimal-generator quotient 10 6 4
+q(s)S1 inclusion strictness failures 0; central rank 6
+cubic minimal-generator quotient = A^4; truncated generators beta_1,2=1 beta_1,3=4 are flat
+CERT ann2 invariants (1, 1, 1)
+CERT ann3 invariants (10, 10, 10)

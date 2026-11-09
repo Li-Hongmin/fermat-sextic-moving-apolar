@@ -1,0 +1,7 @@
+Y0 ideal groebner length 6
+syzygy shape 8 6
+Hom tangent ambient dim 847 equations 796 rank 423 dim 424
+incidence h1 rank/aug 537 538
+
+The exact run uses Y0_EXACT=1 and the absolute field
+Q(zeta_12, 2^(1/3)); the GF(109) run gives the same rank jump.

@@ -1,0 +1,11 @@
+Quotient-only check, October 23, 2026 (Asia/Shanghai).
+Executed the initialization, Groebner basis and ideal-piece counting from
+aoki-y0-hilbert-tangent.sage. The large syzygy/incidence systems were not rerun.
+
+GF(109):
+Y0 ideal groebner length 6
+IDEAL_PIECES [1, 8, 8, 33, 33, 225] TOTAL 308 HILBERT_TANGENT 116
+
+Q(zeta_12,2^(1/3)), Y0_EXACT=1:
+Y0 ideal groebner length 6
+IDEAL_PIECES [1, 8, 8, 33, 33, 225] TOTAL 308 HILBERT_TANGENT 116

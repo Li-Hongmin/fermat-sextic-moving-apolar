@@ -1,0 +1,10 @@
+field_relations: mu^4-mu^2+1=0, a^3=2
+kappa: x2^2*(x5^4+mu^2*x4^4+(1-mu^2)*x3^4)
+supports(P,G,kappa): 38 12 3
+ranks(A,B,[A;B],A+B): 62 62 123 122
+joint_blocks/count/max: 4 132
+common_kernel_dimension: 303
+M*kappa: True
+kappa*C_G*ker(A;B): 0
+ker(A;B)*C_kappa*ker(A;B)^T: 0
+kappa*C_G*G: (-2/3*mu0^2 + 2/3)*a
